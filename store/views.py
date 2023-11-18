@@ -19,3 +19,18 @@ def by_category(request, category_slug):
         "products": products,
     }
     return render(request, "store/store.html", context)
+
+
+def product_detail(request, category_slug, product_slug):
+    product = get_object_or_404(
+        Product,
+        category__slug=category_slug,  # Double underscore is used to access nested attribute
+        slug=product_slug,
+    )
+    return render(
+        request,
+        "store/product_detail.html",
+        {
+            "product": product,
+        },
+    )
