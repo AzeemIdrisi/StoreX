@@ -6,6 +6,8 @@ from category.models import Category
 
 class Product(models.Model):
     product_name = models.CharField(max_length=200, unique=True)
+    brand = models.CharField(max_length=200, null=True)
+    model = models.CharField(max_length=200, blank=True, null=True)
     slug = models.SlugField(unique=True)
     description = models.TextField(max_length=500, blank=True)
     price = models.IntegerField()
