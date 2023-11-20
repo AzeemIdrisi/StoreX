@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-*qr$1(*p7*ex%)-4*fivs8to)v*q0a0h8(6ov8ya=!c*j-22z1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["storex.pythonanywhere.com", "127.0.0.1", "localhost"]
 
 
 # Application definition
@@ -132,3 +132,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "static"
+
+STATIC_ROOT = BASE_DIR / "staticfilesoutput"
