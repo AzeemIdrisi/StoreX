@@ -74,6 +74,15 @@
             <hr />
             {% if product.stock <= 0 %}
             <h4>Out of stock.</h4>
+            {% elif in_cart %}
+            <a href="#" class="btn btn-success">
+              <span class="text">Added to cart</span>
+              <i class="fas fa-check"></i>
+            </a>
+            <a href="{% url 'cart' %}" class="btn btn-outline-primary">
+              <span class="text">View cart</span>
+              <i class="fas fa-shopping-cart"></i>
+            </a>
             {% else %}
             <a
               href="{% url 'add_to_cart' product.id %}"
@@ -104,7 +113,7 @@
         <article class="box mb-3">
           <div class="icontext w-100">
             <img
-              src="./images/avatars/avatar1.jpg"
+              src="{% static '/images/avatars/avatar1.jpg'%}"
               class="img-xs icon rounded-circle"
             />
             <div class="text">

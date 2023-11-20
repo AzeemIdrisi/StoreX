@@ -171,9 +171,9 @@
                   <!-- price-wrap.// -->
                 </div>
                 <a
-                  href="{%url 'add_to_cart' product.id%}"
+                  href="{% url 'product_detail' product.category.slug product.slug %}"
                   class="btn btn-block btn-primary"
-                  >Add to cart
+                  >View Details
                 </a>
               </figcaption>
             </figure>
