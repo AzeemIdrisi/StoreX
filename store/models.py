@@ -51,4 +51,4 @@ class Variant(models.Model):
     objects = VariantManager()
 
     def __str__(self) -> str:
-        return str(self.product.product_name + self.variation_value)
+        return str(self.product.product_name + " : " + self.variation_value)
