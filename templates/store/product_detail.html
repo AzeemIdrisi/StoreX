@@ -55,6 +55,10 @@
                 {% if product.stock <= 0 %}
                   <h4>Out of stock.</h4>
                 {% elif in_cart %}
+                  <button type='SUBMIT'  class="btn btn-primary">
+                    <span class="text">Add to cart</span>
+                    <i class="fas fa-shopping-cart"></i>
+                  </button>
                   <a href="#" class="btn btn-success">
                     <span class="text">Added to cart</span>
                     <i class="fas fa-check"></i>
